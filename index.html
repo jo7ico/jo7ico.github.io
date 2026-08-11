@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jojico.com - Jo7ico's Personal Site</title>
+    <meta
+      name="description"
+      content="Jo7ico is a web designer, web developer, and music producer that develops innovative and creative projects that is original and something you might not see on a daily basis..."
+    />
+    <meta name="author" content="Jojico" />
+    <meta name="keywords" content="jojico, jo7ico" />
+    <meta property="og:title" content="Jojico.com - Jo7ico's Personal Site" />
+    <meta
+      property="og:description"
+      content="Jo7ico is a web designer, web developer, and music producer that develops innovative and creative projects that is original and something you might not see on a daily basis..."
+    />
+    <meta property="og:image" content="images/jojico-pfp.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jojico.com" />
+    <meta name="twitter:card" content="Jojico.com - Jo7ico's Personal Site" />
+    <meta name="twitter:title" content="Jojico.com - Jo7ico's Personal Site" />
+    <meta
+      name="twitter:description"
+      content="Jo7ico is a web designer, web developer, and music producer that develops innovative and creative projects that is original and something you might not see on a daily basis..."
+    />
+    <meta name="twitter:image" content="images/jojico-pfp.JPG" />
+    <link rel="icon" type="image/png" href="images/jojico-pfp.JPG" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header-fix.css" />
+    <meta name="theme-color" content="#483d8b" />
+    <script src="script.js" defer></script>
+    <script src="reveal.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/jojico-pfp.JPG" alt="Jo7ico's profile picture" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html" class="about-link">About</a>
+          <a href="projects.html" class="projects-link">Projects</a>
+          <a href="newsroom.html" class="newsroom-link">Newsroom</a>
+          <a href="contact.html" class="contact-link">Contact</a>
+        </nav>
+        <label class="switch" data-tooltip="Toggle light mode">
+          <input type="checkbox" onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <h1>
+      &lt;welcome&gt;Jo7ico's Personal Website&lt;/welcome&gt;<span
+        class="cursor"
+        >_</span
+      >
+    </h1>
+    <p>
+      Building web &amp; digital
+      <b><span class="gold">experiences</span></b> through technological &amp;
+      advanced <span class="rosybrown">creativity</span>.
+    </p>
+    <button onclick="location.href = 'about.html'">Who is Jo7ico?</button>
+    <br />
+    <img class="pfp" src="images/jojico-pfp.JPG" alt="Jo7ico's PFP" />
+    <h2 class="who">
+      A <span class="darkslateblue">website developer</span>,
+      <span class="gold">web &amp; tech designer</span>, and
+      <span class="rosybrown">music producer</span>.
+    </h2>
+    <h2 class="devFont">Jo7ico makes...</h2>
+    <div class="typing-wrap">
+      <span class="typingWrap">
+        <span id="typing"></span><span class="cursor">_</span>
+      </span>
+    </div>
+
+    <h2 class="margin-top">Take a look at one of Jo7ico's creations.</h2>
+
+    <div class="macbook-container">
+      <img
+        id="macbookPro"
+        src="images/macbook-pro-white.png"
+        class="macbook-frame"
+      />
+
+      <div class="macbook-screen">
+        <div class="iframe-scale-wrap">
+          <iframe
+            src="https://jo7ico.github.io/project2"
+            sandbox="allow-scripts allow-forms allow-popups"
+            scrolling="no"
+            tabindex="-1"
+            aria-hidden="true"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <button
+      onclick="location.href = 'https://jo7ico.github.io/project2'"
+      target="_blank"
+    >
+      Try it out
+    </button>
+
+    <section class="recent-news">
+      <h3>Recent News</h3>
+      <a href="articles/1.html" class="news-link" target="_blank">
+        <div
+          class="news-card"
+          data-title="Jo7ico's Official Website has Finally been Launched!"
+          data-tag="Release"
+          data-date="2026-07-16"
+        >
+          <img src="images/cover1.png" />
+          <div class="news-tag">Release</div>
+          <div class="news-title">
+            Jo7ico's Official Website has Finally been Launched!
+          </div>
+          <div class="news-date">July 16, 2026</div>
+        </div>
+      </a>
+      <div class="view-more">
+        <button onclick="location.href = 'newsroom.html'">View More</button>
+      </div>
+    </section>
+
+    <section id="visit" class="visit">
+      <h5 class="other-links-title">Visit Jo7ico's &#45;</h5>
+      <button onclick="location.href = 'https://github.com/jo7ico'">
+        Github
+      </button>
+      <button onclick="location.href = 'about.html'" class="rosybrown-btn">
+        About Page
+      </button>
+      <button onclick="location.href = 'projects.html'" class="gold-btn">
+        Projects &amp; Websites
+      </button>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="logo footer-logo">
+          <a href="index.html">
+            <img src="images/jojico-pfp.JPG" alt="Jo7ico's profile picture" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html" class="about-link">About</a>
+          <a href="projects.html" class="projects-link">Projects</a>
+          <a href="newsroom.html" class="newsroom-link">Newsroom</a>
+          <a href="contact.html" class="contact-link">Contact</a>
+        </nav>
+        <br />
+        <nav class="nav-links">
+          <a href="https://github.com/jo7ico" class="about-link">Github</a>
+          <a href="images/jojico-skin.png" class="contact-link" download
+            >Jo7ico's Minecraft Skin</a
+          >
+        </nav>
+        <span class="footer-copy">Built by Jo7ico With Care • © 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>
