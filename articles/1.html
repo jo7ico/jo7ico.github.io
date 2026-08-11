@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jo7ico's Official Site has been Launched!</title>
+    <meta
+      name="description"
+      content="Jo7ico's official website has officially launched...'"
+    />
+    <meta name="author" content="Jojico" />
+    <meta name="keywords" content="jojico, jo7ico" />
+    <meta
+      property="og:title"
+      content="Jo7ico's Official Site has been Launched!"
+    />
+    <meta
+      property="og:description"
+      content="Jo7ico's official website has officially launched...'"
+    />
+    <meta property="og:image" content="../images/jojico-pfp.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jojico.com/articles/1" />
+    <meta
+      name="twitter:card"
+      content="Jo7ico's Official Site has been Launched!"
+    />
+    <meta
+      name="twitter:title"
+      content="Jo7ico's Official Site has been Launched!"
+    />
+    <meta
+      name="twitter:description"
+      content="Jo7ico's official website has officially launched...'"
+    />
+    <meta name="twitter:image" content="../images/jojico-pfp.JPG" />
+    <link rel="icon" type="image/png" href="../images/jojico-pfp.JPG" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../header-fix.css" />
+    <meta name="theme-color" content="#483d8b" />
+    <script src="../script.js" defer></script>
+    <script src="../reveal.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              src="../images/jojico-pfp.JPG"
+              alt="Jo7ico's profile picture"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="../about.html">About</a>
+          <a href="../projects.html" class="projects-link">Projects</a>
+          <a href="../newsroom.html" class="newsroom-link"
+            ><span class="active">Newsroom</span></a
+          >
+          <a href="../contact.html" class="contact-link">Contact</a>
+        </nav>
+        <label class="switch" data-tooltip="Toggle dark mode">
+          <input type="checkbox" onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <section class="article-page">
+      <div class="article-header">
+        <h1>Jo7ico's Official Website has Finally been Launched!</h1>
+        <p class="article-date">August 11, 2026</p>
+      </div>
+
+      <div class="article-content">
+        <img src="../images/cover1.png" class="article-image" />
+
+        <p>
+          Shanghai —— The official site of Jo7ico has been officially launched!
+          The site may still not be perfect for now, but it is now live and
+          available for the public to view. The site will be updated with new
+          content and features in the future, so stay tuned for more updates!
+        </p>
+        <br />
+        <p>
+          Welcome to a new chapter. This new beginning is
+          <span class="italic">not</span> a simple portfolio site, a random
+          hacker site or just a resume website that no one will see, but a
+          <span class="underline"
+            >website that includes various of projects, stories, articles,
+            music, and apps</span
+          >
+          <span class="gold">(all free)</span> that may be
+          <span class="slategray">actually useful</span> for you while covering
+          a bunch of topics such as
+          <span class="rosybrown"
+            >politics, geopolitics, geography, history, tech, hardware,
+            software, and much more</span
+          >.
+        </p>
+        <br />
+        <p>
+          This website is beautifully created with intention. All the projects,
+          songs, and apps are built carefully and with full effort, mainly
+          focusing on the design and user experience. If you see any problems in
+          any of my works, please
+          <a href="../contact.html" title="contact">let me know</a>.
+        </p>
+        <br />
+        <p>
+          This is only the beginning. As new ideas emerge, they’ll find a home
+          here and will evolve and shape the future of this journey and this
+          site. What you see today is the foundation, but the story continues.
+        </p>
+        <br />
+      </div>
+    </section>
+
+    <section class="more-articles">
+      <h2>More Articles</h2>
+
+      <div class="news-grid" id="more-articles-grid"></div>
+    </section>
+
+    <script>
+      async function loadMoreArticles() {
+        const container = document.getElementById("more-articles-grid");
+
+        try {
+          const response = await fetch("../newsroom.html");
+          const text = await response.text();
+
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, "text/html");
+
+          const allArticles = doc.querySelectorAll("a.news-link");
+
+          let articlesArray = Array.from(allArticles);
+          articlesArray.sort(() => Math.random() - 0.5);
+
+          const selected = articlesArray.slice(0, 4);
+
+          selected.forEach((article) => {
+            const clonedArticle = article.cloneNode(true);
+
+            clonedArticle.querySelectorAll("img").forEach((img) => {
+              const src = img.getAttribute("src");
+
+              if (src) {
+                const filename = src.split("/").pop();
+                img.setAttribute("src", "../images/" + filename);
+              }
+            });
+
+            const href = clonedArticle.getAttribute("href");
+
+            if (href && !href.startsWith("../")) {
+              clonedArticle.setAttribute("href", "../" + href);
+            }
+
+            container.appendChild(clonedArticle);
+          });
+        } catch (error) {
+          console.error("Error loading articles:", error);
+        }
+      }
+
+      loadMoreArticles();
+    </script>
+  </body>
+</html>

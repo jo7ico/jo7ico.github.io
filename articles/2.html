@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jo7ico is Now a DEM1AN Member</title>
+    <meta
+      name="description"
+      content="Jo7ico joined the band of DEM1AN as a multimedia editor and music producer..."
+    />
+    <meta name="author" content="Jojico" />
+    <meta name="keywords" content="jojico, jo7ico, dem1an, DEM1AN" />
+    <meta property="og:title" content="Jo7ico is Now a DEM1AN Member" />
+    <meta
+      property="og:description"
+      content="Jo7ico joined the band of DEM1AN as a multimedia editor and music producer..."
+    />
+    <meta property="og:image" content="../images/jojico-pfp.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jojico.com/articles/2" />
+    <meta name="twitter:card" content="Jo7ico is Now a DEM1AN Member" />
+    <meta name="twitter:title" content="Jo7ico is Now a DEM1AN Member" />
+    <meta
+      name="twitter:description"
+      content="Jo7ico joined the band of DEM1AN as a multimedia editor and music producer..."
+    />
+    <meta name="twitter:image" content="../images/jojico-pfp.JPG" />
+    <link rel="icon" type="image/png" href="../images/jojico-pfp.JPG" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../header-fix.css" />
+    <meta name="theme-color" content="#483d8b" />
+    <script src="../script.js" defer></script>
+    <script src="../reveal.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              src="../images/jojico-pfp.JPG"
+              alt="Jo7ico's profile picture"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="../about.html">About</a>
+          <a href="../projects.html" class="projects-link">Projects</a>
+          <a href="../newsroom.html" class="newsroom-link"
+            ><span class="active">Newsroom</span></a
+          >
+          <a href="../contact.html" class="contact-link">Contact</a>
+        </nav>
+        <label class="switch" data-tooltip="Toggle dark mode">
+          <input type="checkbox" onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <section class="article-page">
+      <div class="article-header">
+        <h1>Jo7ico is Now a DEM1AN Member</h1>
+        <p class="article-date">May 8, 2026</p>
+      </div>
+
+      <div class="article-content">
+        <img src="../images/cover2.png" class="article-image" />
+
+        <p>
+          Suzhou —— Jo7ico has joined the band/music group of DEM1AN as a
+          multimedia editor, music producer, and web developer after months of
+          cooperation between Jo7ico and the DEM1AN group.
+        </p>
+        <br />
+        <p>
+          DEM1AN is a music and production group that focuses on creating music and content that is unique and original, with a focus on creativity and innovation. Jo7ico will be working closely with the group to create new music, music videos, and other content that will be released in the future.
+        </p>
+        <br />
+        <p>
+          Jo7ico is currently developing the official website of DEM1AN. Stay tuned!</a>.
+        </p>
+        <br />
+        <p>
+          Jo7ico and the music group DEM1AN has been working together for a while now and soon, Jo7ico joined the group, helping to make DEM1AN's second release: Hikikomori.
+        </p>
+        <br />
+      </div>
+    </section>
+
+    <section class="more-articles">
+      <h2>More Articles</h2>
+
+      <div class="news-grid" id="more-articles-grid"></div>
+    </section>
+
+    <script>
+      async function loadMoreArticles() {
+        const container = document.getElementById("more-articles-grid");
+
+        try {
+          const response = await fetch("../newsroom.html");
+          const text = await response.text();
+
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, "text/html");
+
+          const allArticles = doc.querySelectorAll("a.news-link");
+
+          let articlesArray = Array.from(allArticles);
+          articlesArray.sort(() => Math.random() - 0.5);
+
+          const selected = articlesArray.slice(0, 4);
+
+          selected.forEach((article) => {
+            const clonedArticle = article.cloneNode(true);
+
+            clonedArticle.querySelectorAll("img").forEach((img) => {
+              const src = img.getAttribute("src");
+
+              if (src) {
+                const filename = src.split("/").pop();
+                img.setAttribute("src", "../images/" + filename);
+              }
+            });
+
+            const href = clonedArticle.getAttribute("href");
+
+            if (href && !href.startsWith("../")) {
+              clonedArticle.setAttribute("href", "../" + href);
+            }
+
+            container.appendChild(clonedArticle);
+          });
+        } catch (error) {
+          console.error("Error loading articles:", error);
+        }
+      }
+
+      loadMoreArticles();
+    </script>
+  </body>
+</html>
