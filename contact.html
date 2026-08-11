@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jojico.com - Contact</title>
+    <meta
+      name="description"
+      content="Contact Jo7ico for questions, project inquiries, requests, suggestions, and feedback here..."
+    />
+    <meta name="author" content="Jojico" />
+    <meta
+      name="keywords"
+      content="jojico, jo7ico, contact, message, inquiry, feedback, report"
+    />
+    <meta property="og:title" content="Jojico.com - Contact" />
+    <meta
+      property="og:description"
+      content="Contact Jo7ico for questions, project inquiries, requests, suggestions, and feedback here..."
+    />
+    <meta property="og:image" content="images/jojico-pfp.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jojico.com/contact" />
+    <meta name="twitter:card" content="Jojico.com - Contact" />
+    <meta name="twitter:title" content="Jojico.com - Contact" />
+    <meta
+      name="twitter:description"
+      content="Contact Jo7ico for questions, project inquiries, requests, suggestions, and feedback here..."
+    />
+    <meta name="twitter:image" content="images/jojico-pfp.JPG" />
+    <link rel="icon" type="image/png" href="images/jojico-pfp.JPG" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header-fix.css" />
+    <meta name="theme-color" content="#483d8b" />
+    <script src="script.js" defer></script>
+    <script src="reveal.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/jojico-pfp.JPG" alt="Jo7ico's profile picture" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html" class="about-link">About</a>
+          <a href="projects.html" class="projects-link">Projects</a>
+          <a href="newsroom.html" class="newsroom-link">Newsroom</a>
+          <a href="contact.html" class="contact-link"
+            ><span class="active">Contact</span></a
+          >
+        </nav>
+        <label class="switch" data-tooltip="Toggle dark mode">
+          <input type="checkbox" onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <h1>Get in Touch.<span class="cursor">_</span></h1>
+    <p class="margins">
+      For questions, project inquiries, requests, suggestions, and feedback,
+      please use the form below.
+    </p>
+
+    <div class="ipad-container">
+      <img
+        id="ipadA16Vertical"
+        src="images/ipadVertical-pink.png"
+        class="ipad-frame"
+      />
+
+      <div class="ipad-screen">
+        <form action="sendmail.php" method="POST" style="border: none">
+          <h2>Contact</h2>
+          <label for="title" class="darkslateblue">Title:</label>
+          <input type="text" name="title" required /><br /><br />
+
+          <label for="name" class="rosybrown">Name:</label>
+          <input type="text" name="name" required /><br /><br />
+
+          <label for="email" class="gold">Your email:</label>
+          <input type="email" name="email" required /><br /><br />
+
+          <label for="message" class="slategray">Message:</label><br />
+          <textarea name="message" rows="5" required></textarea><br /><br />
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="logo footer-logo">
+          <a href="index.html">
+            <img src="images/jojico-pfp.JPG" alt="Jo7ico's profile picture" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html" class="about-link">About</a>
+          <a href="projects.html" class="projects-link">Projects</a>
+          <a href="newsroom.html" class="newsroom-link">Newsroom</a>
+          <a href="contact.html" class="contact-link"
+            ><span class="active">Contact</span></a
+          >
+        </nav>
+        <br />
+        <nav class="nav-links">
+          <a href="https://github.com/jo7ico" class="about-link">Github</a>
+          <a href="images/jojico-skin.png" class="contact-link" download
+            >Jo7ico's Minecraft Skin</a
+          >
+        </nav>
+        <span class="footer-copy">Built by Jo7ico With Care • © 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>

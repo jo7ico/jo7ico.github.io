@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jojico.com - Newsroom</title>
+    <meta
+      name="description"
+      content="Keep updated and informed by new releases and other events by Jo7ico..."
+    />
+    <meta name="author" content="Jojico" />
+    <meta name="keywords" content="jojico, jo7ico" />
+    <meta property="og:title" content="Jojico.com - Newsroom" />
+    <meta
+      property="og:description"
+      content="Keep updated and informed by new releases and other events by Jo7ico..."
+    />
+    <meta property="og:image" content="images/jojico-pfp.JPG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jojico.com/newsroom" />
+    <meta name="twitter:card" content="Jojico.com - Newsroom" />
+    <meta name="twitter:title" content="Jojico.com - Newsroom" />
+    <meta
+      name="twitter:description"
+      content="Keep updated and informed by new releases and other events by Jo7ico."
+    />
+    <meta name="twitter:image" content="images/jojico-pfp.JPG" />
+    <link rel="icon" type="image/png" href="images/jojico-pfp.JPG" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header-fix.css" />
+    <meta name="theme-color" content="#483d8b" />
+    <script src="script.js" defer></script>
+    <script src="reveal.js" defer></script>
+    <script src="articles.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/jojico-pfp.JPG" alt="Jo7ico's profile picture" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html" class="about-link">About</a>
+          <a href="projects.html" class="projects-link">Projects</a>
+          <a href="newsroom.html" class="newsroom-link"
+            ><span class="active">Newsroom</span></a
+          >
+          <a href="contact.html" class="contact-link">Contact</a>
+        </nav>
+        <label class="switch" data-tooltip="Toggle dark mode">
+          <input type="checkbox" onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+    <section class="news">
+      <h1>Newsroom<span class="cursor">_</span></h1>
+      <div class="container" id="main-feed">
+        <div class="search-container">
+          <h2>Latest News</h2>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search News"
+            onkeyup="filterArticles()"
+          />
+        </div>
+
+        <div class="news-grid" id="news-grid">
+          <a href="articles/1.html" class="news-link" target="_blank">
+            <div
+              class="news-card"
+              data-title="Jo7ico's Official Website has Finally been Launched!"
+              data-tag="Release"
+              data-date="2026-08-11"
+            >
+              <img src="images/cover1.png" />
+              <div class="news-tag">Release</div>
+              <div class="news-title">
+                Jo7ico's Official Website has Finally been Launched!
+              </div>
+              <div class="news-date">August 11, 2026</div>
+            </div>
+          </a>
+
+          <a href="articles/2.html" class="news-link" target="_blank">
+            <div
+              class="news-card"
+              data-title="Jo7ico is Now a DEM1AN Member"
+              data-tag="Release"
+              data-date="2026-05-8"
+            >
+              <img src="images/cover2.png" />
+              <div class="news-tag">Announcement</div>
+              <div class="news-title">Jo7ico is Now a DEM1AN Member</div>
+              <div class="news-date">May 8, 2026</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="view-more">
+          <button id="view-more-btn" onclick="showMoreArticles()">
+            View More
+          </button>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section id="visit" class="visit">
+      <h5>Visit Jo7ico's &#45;</h5>
+      <button onclick="location.href = 'https://github.com/jo7ico'">
+        Github
+      </button>
+      <button onclick="location.href = 'about.html'" class="rosybrown-btn">
+        About Page
+      </button>
+      <button onclick="location.href = 'projects.html'" class="gold-btn">
+        Projects &amp; Websites
+      </button>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="logo footer-logo">
+          <a href="index.html">
+            <img src="images/jojico-pfp.JPG" alt="Jo7ico's profile picture" />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="about.html" class="about-link">About</a>
+          <a href="projects.html" class="projects-link">Projects</a>
+          <a href="newsroom.html" class="newsroom-link"
+            ><span class="active">Newsroom</span></a
+          >
+          <a href="contact.html" class="contact-link">Contact</a>
+        </nav>
+        <br />
+        <nav class="nav-links">
+          <a href="https://github.com/jo7ico" class="about-link">Github</a>
+          <a href="images/jojico-skin.png" class="contact-link" download
+            >Jo7ico's Minecraft Skin</a
+          >
+        </nav>
+        <span class="footer-copy">Built by Jo7ico With Care • © 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>
